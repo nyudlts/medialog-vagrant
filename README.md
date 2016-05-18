@@ -9,4 +9,4 @@ $ vagrant up
 
 then open a browser to http://localhost:3100
 
-youcna log in with admin@example.com/password
+you should be able to now log in with: admin@example.com/password
