@@ -39,5 +39,3 @@ rake db:migrate
 rake users:create_admin
 
 rspec spec
-
-rails s
