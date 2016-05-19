@@ -22,3 +22,5 @@ start the server: <br>
 $ rails s
 
 then open a browser to http://localhost:3100, you should be able to now log in with: admin@example.com/password
+
+consult the quickstart guide for using the app: https://github.com/dmnyu/medialog-vagrant/blob/master/medialogquickstart.pdf
