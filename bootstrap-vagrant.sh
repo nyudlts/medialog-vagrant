@@ -18,7 +18,7 @@ rvm --default use 2.3.0@medialog
 
 cd /vagrant
 
-git clone https://github.com/NYULibraries/medialog
+git clone https://github.com/NYU-ACM/medialog
 
 cd medialog
 
