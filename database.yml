@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: medialog-dev
+  database: medialogdev
   username: medialog
   password: medialog
   host: localhost
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: medialog-test
+  database: medialogtest
   username: medialog
   password: medialog
   host: localhost
