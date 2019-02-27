@@ -2,7 +2,7 @@
 
 yum install -y deltarpm
 
-yum install -y git puppet ruby-devel libxml2-devel libxslt-devel zlib-devel gcc-c++ postgresql-server postgresql-contrib
+yum install -y git puppet ruby-devel libxml2-devel libxslt-devel zlib-devel gcc-c++ postgresql-server postgresql-contrib postgresql-devel
 
 systemctl enable postgresql
 
