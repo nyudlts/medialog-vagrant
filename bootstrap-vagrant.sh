@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+
+curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 
 \curl -sSL https://get.rvm.io | bash -s stable
 
@@ -16,18 +18,18 @@ rvm ruby-2.3.0 do rvm gemset create medialog
 
 rvm --default use 2.3.0@medialog
 
+gem update --system 3.2.3
+
+gem install bundler:1.16.6
+
 cd /vagrant
 
-git clone https://github.com/NYU-ACM/medialog
+git clone https://github.com/nyudlts/medialog
 
 cd medialog
-
-gem install bundler
-
-bundle config build.nokogiri --use-system-libraries
-
-bundle install
 
 cp /vagrant/database.yml /vagrant/medialog/config/
 
 cp /vagrant/accounts.yml /vagrant/medialog/config/
+
+bundle install
