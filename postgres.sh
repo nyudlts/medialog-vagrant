@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-yum remove -y postgresql postgresql-libs postgresql-server postgresql-contrib postgresql-devel
+yum remove -y postgresql postgresql-libs postgresql-devel
 
 yum install -y devtoolset-7 llvm-toolset-7
 

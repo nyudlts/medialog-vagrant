@@ -32,6 +32,6 @@ cp /vagrant/database.yml /vagrant/medialog/config/
 
 cp /vagrant/accounts.yml /vagrant/medialog/config/
 
-sed -i 's/panic/warning/g' /home/vagrant/.rvm/gems/ruby-2.3.0@medialog/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb
-
 bundle install
+
+sed -i 's/panic/warning/g' /home/vagrant/.rvm/gems/ruby-2.3.0@medialog/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb
