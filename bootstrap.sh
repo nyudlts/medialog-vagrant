@@ -14,6 +14,8 @@ yum install -y postgresql14-server postgresql14-devel postgresql14-contrib
 
 /usr/pgsql-14/bin/postgresql-14-setup initdb
 
+sudo rm /var/lib/psql/14/data/pg_hba.conf
+
 mv /vagrant/pg_hba.conf /var/lib/psql/14/data/pg_hba.conf
 
 systemctl enable postgresql-14
