@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
 
-yum install -y deltarpm
+yum update -y
 
-yum install -y git puppet ruby-devel libxml2-devel libxslt-devel zlib-devel gcc-c++ postgresql-server postgresql-contrib postgresql-devel
+yum install -y git ruby-devel libxml2-devel libxslt-devel zlib-devel gcc-c++
 
-systemctl enable postgresql
+yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
-postgresql-setup initdb
+yum update -y
 
-systemctl start postgresql
+yum install -y postgresql14-server
+
+echo "rails        3000/tcp" >> /etc/services
+
+service firewalld enable
+
+service firewalld start
 
 firewall-cmd --zone public --add-port 3000/tcp --permanent
 
-systemctl restart firewalld
+firewall-cmd --reload
+
+iptables-save
