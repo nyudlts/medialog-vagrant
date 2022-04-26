@@ -22,6 +22,6 @@ su - postgres -c "/usr/pgsql-14/bin/psql -c \"CREATE USER medialog superuser log
 su - postgres -c "/usr/pgsql-14/bin/psql -c \"CREATE DATABASE medialog owner medialog;\""
 su - postgres -c "/usr/pgsql-14/bin/psql -c \"CREATE DATABASE medialogtest owner medialog;\""
 su - postgres -c "/usr/pgsql-14/bin/psql -c \"CREATE DATABASE medialogdev owner medialog;\""
-su - postgres -c "/usr/pgsql-14/bin/psql medialogdev /vagrant/medialog.sql"
+su - postgres -c "/usr/pgsql-14/bin/psql medialogdev < /vagrant/medialog.sql"
 
 yum install -y libpq
