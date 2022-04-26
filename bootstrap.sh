@@ -2,13 +2,9 @@
 
 yum update -y
 
-yum install -y git ruby-devel libxml2-devel libxslt-devel zlib-devel gcc-c++
-
-yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+yum install -y git ruby-devel libxml2-devel libxslt-devel zlib-devel gcc-c++ postgresql-server postgresql-devel postgresql-contrib
 
 yum update -y
-
-yum install -y postgresql14-server
 
 echo "rails        3000/tcp" >> /etc/services
 
