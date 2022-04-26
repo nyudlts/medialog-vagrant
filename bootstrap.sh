@@ -12,6 +12,14 @@ yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_6
 
 yum install -y postgresql14-server postgresql14-devel postgresql14-contrib
 
+/usr/pgsql-14/bin/postgresql-14-setup initdb
+
+mv /vagrant/pg_hba.conf /var/lib/psql/14/data/pg_hba.conf
+
+systemctl enable postgresql-14
+
+systemctl start postgresql-14
+
 echo "rails        3000/tcp" >> /etc/services
 
 service firewalld enable
