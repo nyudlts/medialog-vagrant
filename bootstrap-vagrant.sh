@@ -28,7 +28,7 @@ git clone https://github.com/nyudlts/medialog
 
 cd medialog
 
-cp /vagrant/database.yml /vagrant/medialog/config/
+cp /vagrant/database-rds.yml /vagrant/medialog/config/database.yml
 
 cp /vagrant/accounts.yml /vagrant/medialog/config/
 
