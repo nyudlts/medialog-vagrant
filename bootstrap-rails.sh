@@ -30,6 +30,8 @@ cd medialog
 
 cp /vagrant/database-rds.yml /var/www/medialog/config/database.yml
 
+cp /vagrant/accounts.yml /var/www/medialog/config/accounts.yml
+
 bundle install
 
 RAILS_ENV=production bundle exec rake assets:precompile
