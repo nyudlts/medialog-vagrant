@@ -30,6 +30,10 @@ sudo cp /vagrant/medialog.conf /etc/nginx/conf.d/medialog.conf
 
 sudo cp /vagrant/medialog.service /usr/lib/systemd/system/medialog.service
 
+sudo mkdir /var/www
+
+sudo chown -R vagrant:vagrant /var/www
+
 systemctl enable nginx
 
 systemctl enable medialog
