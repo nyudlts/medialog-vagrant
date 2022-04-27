@@ -22,16 +22,16 @@ gem update --system 3.2.3
 
 gem install bundler:1.16.6
 
-cd /vagrant
+cd /var/www
 
 git clone https://github.com/nyudlts/medialog
 
 cd medialog
 
-cp /vagrant/database-rds.yml /vagrant/medialog/config/database.yml
-
-cp /vagrant/accounts.yml /vagrant/medialog/config/
+cp /vagrant/database-rds.yml /var/www/medialog/config/database.yml
 
 bundle install
+
+RAILS_ENV=production bundle exec rake assets:precompile
 
 sed -i 's/panic/warning/g' /home/vagrant/.rvm/gems/ruby-2.3.0@medialog/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb
