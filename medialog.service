@@ -1,0 +1,17 @@
+[Unit]
+Description=medialog
+Requires=network.target
+
+
+[Service]
+Type=simple
+User=vagrant
+Group=vagrant
+WorkingDirectory=/vagrant/medialog
+ExecStart=/usr/bin/bash -lc 'bundle exec rails server -e production --bind 127.0.0.1 --port 3000'
+TimeoutSec=30
+RestartSec=15s
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

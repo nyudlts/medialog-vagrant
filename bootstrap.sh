@@ -28,6 +28,8 @@ sudo cp /vagrant/nginx.conf /etc/nginx/nginx.conf
 
 sudo cp /vagrant/medialog.conf /etc/nginx/conf.d/medialog.conf
 
+sudo cp /vagrant/medialog.service /usr/lib/systemd/system/medialog.service
+
 systemctl enable nginx
 
-systemctl start nginx
+systemctl enable medialog
